@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Visualization Final</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Sedgwick+Ave&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/a5212137dc.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- id is unique, but classes you can use anywhere -->
+
+    <!-- <div id="controls">
+
+        <form id="subgenre-select">
+            <label>
+                <input type="checkbox" name="hiphop" value="Boom Bap" checked> Boom Bap
+            </label>
+            <label>
+                <input type="checkbox" name="hiphop" value="Conscious Hip-Hop" checked> Conscious Hip-Hop
+            </label>
+            <label>
+                <input type="checkbox" name="hiphop" value="Dirty South" checked> Dirty South
+            </label>
+            <label>
+                <input type="checkbox" name="hiphop" value="Drill" checked> Drill
+            </label>
+            <label>
+                <input type="checkbox" name="hiphop" value="East Coast" checked> East Coast
+            </label>
+            <label>
+                <input type="checkbox" name="hiphop" value="Emo Rap" checked> Emo Rap
+            </label>
+            <label>
+                <input type="checkbox" name="hiphop" value="Freestyle" checked> Freestyle
+            </label>
+            <label>
+                <input type="checkbox" name="hiphop" value="Gangsta Rap" checked> Gangsta Rap
+            </label>
+            <label>
+                <input type="checkbox" name="hiphop" value="Hardcore Hip Hop" checked> Hardcore Hip-Hop
+            </label>
+            <label>
+                <input type="checkbox" name="hiphop" value="Trap" checked> Trap
+            </label>
+            <label>
+                <input type="checkbox" name="hiphop" value="West Coast" checked> West Coast
+            </label>
+            <button id="filter-btn" type="submit">Submit</button>
+        </form>
+
+    </div> -->
+
+    <section id="cover">
+
+        <div class="title">
+
+            <div class="text-block">
+                <h1 id="title-font">Beats and Bars: A Journey Through Hip-Hop’s Identity</h1>
+                <p>
+                    Born in the Bronx during the 1970s, hip hop has grown into a worldwide cultural movement, shaping
+                    music, language, fashion, and activism (Hip Hop: A Culture of Vision and Voice) . Its adaptability
+                    has led to the emergence of distinct subgenres, each reflecting unique regional styles, sounds, and
+                    narratives. From the hard-hitting beats of Gangsta Rap to the melodic hooks of Trap, hip hop
+                    continues to evolve while preserving its creative essence.
+                    In this project, we explore hip hop's subgenres through three key aspects:<br><br>
+                    <b>Influence and Popularity Over Time:</b> Charting the rise and evolution of subgenres across
+                    decades.<br>
+                    <b>Musical Qualities:</b> Examining rhythm, tempo, and melody that define each subgenre's sound.<br>
+                    <b>Lyrical Themes & Language:</b> Highlighting recurring topics and language that give each style
+                    its voice.
+                </p>
+            </div>
+
+        </div>
+
+        <div data-aos="fade-up" class="full-graph-container">
+            <iframe
+                src="https://public.tableau.com/views/PixelDisplay/Dashboard2?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                class="masked-out">
+            </iframe>
+        </div>
+
+    </section>
+
+    <section id="chapter-one">
+
+        <div class="title">
+
+            <div class="text-block">
+                <h1>Chapter I: Trends</h1>
+                <p>
+                    This chapter analyzes overarching trends across three key dimensions of hip-hop and rap:
+                    popularity, melody, and lyrics. By analyzing changes over time,
+                    Chapter 1 provides a view of how the genre has evolved and diversified.</p>
+            </div>
+
+        </div>
+
+
+        <!-- Popularity Graph -->
+        <div class="graph-div">
+
+            <div class="text-block">
+                <h2>1.1 Popularity Trends</h2>
+                <p>
+                    This visualization explores hip-hop’s evolution from the 1970s to the 2010s,
+                    highlighting the growth and popularity of its subgenres.
+                    The upper area graph shows song popularity through views,
+                    while the lower line graph tracks the number of songs released in each subgenre over time,
+                    with peak years marked for key styles.</p>
+            </div>
+
+            <!-- <tableau-viz class="full-graph" id="graph1" data-aos="fade-up"
+                src='https://public.tableau.com/views/Popularity_Subgenre/Dashboard1' toolbar="hidden" hide-tabs
+                width="100vw" height="70vh">
+            </tableau-viz> -->
+
+            <div data-aos="fade-up" class="full-graph-container">
+                <iframe
+                    src="https://public.tableau.com/views/Popularity_Subgenre/Dashboard1?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                    class="masked-out"></iframe>
+            </div>
+
+            <button class="btn-accordian" id="btn-popularity"
+                onclick="popularityOpen(event, 'popularity-accordian')">Click to View Graph Insights
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <div class="insight-accordian" id="popularity-accordian">
+
+                <div class="insight-content">
+
+                    <div class="text-block">
+
+                        <p>In the earlier decades, Trap wasn’t as prominent, in correspondence to hip-hop still carving
+                            out its
+                            space in the music industry. As hip-hop gained widespread recognition and became more
+                            mainstream in
+                            the 2000s and 2010s, Trap emerged as one of its most influential and defining subgenres.
+                        </p>
+
+                    </div>
+
+                    <div class="insight-div">
+
+                        <div class="insights">
+
+                            <img src="insights/fig2.png" alt="insights1">
+                            <p>
+                                The peak year for the Trap subgenre was 2017, with 1,168 songs released. This signifies
+                                not just
+                                a peak in output but highlights the sheer prominence of Trap within the hip-hop
+                                landscape during
+                                that year.
+                            </p>
+
+                        </div>
+
+                        <div class="insights">
+
+                            <img src="insights/fig3.png" alt="insights1">
+                            <p>
+                                In terms of views, Trap songs collectively amassed over 242 million views in 2017,
+                                underscoring
+                                its popularity not only in production but also in listener engagement.
+
+                            </p>
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Melody Graph -->
+        <div class="graph-div">
+
+            <div class="text-block">
+                <h2>1.2 Melody Trends</h2>
+                <p>
+                    This visualization presents trends over time in four key metrics for songs across subgenres:
+                    <b>Duration, BPM, Pitch, and Volume.</b>
+                    The graph includes individual data points for songs,
+                    and the red trend lines indicate overall changes in these metrics from 1991 to 2018. Songs are
+                    plotted by year and the white line represents the average value of the year, with the red line
+                    indicating the overall trends. This graph captures both subgenre-specific fluctuations and broader
+                    patterns in the evolution of hip-hop's
+                    sound.
+                </p>
+            </div>
+
+            <div data-aos="fade-up" class="full-graph-container">
+                <iframe
+                    src="https://public.tableau.com/views/MelodyFeature/MelodyTrend?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                    class="masked-out"></iframe>
+            </div>
+
+            <button class="btn-accordian" id="btn-popularity" onclick="popularityOpen(event, 'melody-accordian')">Click
+                to View Insights for Trap <i class="fa-solid fa-chevron-down"></i> </button>
+            <div class="insight-accordian" id="melody-accordian">
+
+                <div class="insight-content">
+
+                    <img class="insight-img" src="insights/fig14.png" alt="">
+
+                    <div class="text-block">
+
+                        <p><b>Duration:</b> Trap songs have maintained relatively stable durations, reflecting
+                            consistency in structure while other elements of the subgenre have evolved.
+                        </p>
+                        <p><b>Pitch:</b> Trap music’s pitch remains steady, supporting its signature deep basslines and
+                            atmospheric layers without major shifts over time.
+
+                        </p>
+                        <p><b>Volume:</b> The volume of Trap music has shown a consistent increase over time, indicating
+                            a trend toward louder, more impactful production styles.
+
+
+                        </p>
+
+                        <h3>You can further explore with the visualization by highlighting different genres to see how
+                            specific sub genres change over time and compare that with the general trend.
+                        </h3>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- 1.3 lyric trends -->
+        <div class="text-block">
+            <h2>1.3 Lyrical Trends</h2>
+            <p>The visualization, <b>Word Category Trend</b>, shows the rank of frequency for various word categories
+                over three decades
+                (1980-2000, 2000-2010, 2010-2020). Categories such as "relationships," "violence," and "time" have
+                fluctuated in
+                popularity, with "relationships" consistently ranking higher in lyrical focus.. Each category is
+                represented as a unique shape and the connecting lines illustrate trends over time. The chart highlights
+                how word categories such as relationships, violence, time, wealth, and emotion have shifted in
+                prominence within hip-hop lyrics. You can click on individual datapoint (icon) for details about that
+                word category in a specific decade, or click on the connecting lines to highlight the whole trend of a
+                word category.
+            </p>
+            <p>
+                The second visualization, <b>Unique Word Count Trend</b>, tracks the number of unique words used in
+                songs over time. This chart visualizes the unique word count in hip-hop lyrics over time, with each data
+                point representing a single song. The x-axis shows the release year of the songs, while the y-axis
+                displays the number of unique words in each song.
+                A general decline in unique word count is observed, suggesting a trend toward more repetitive or
+                standardized lyrics across all subgenres.
+            </p>
+        </div>
+
+        <div data-aos="fade-up" class="full-graph-container">
+            <iframe
+                src="https://public.tableau.com/views/WordFrequencybyGenreandDecade_17331267844990/Dashboard1?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                class="masked-out"></iframe>
+        </div>
+
+        <!-- <tableau-viz class="full-graph" id="graph3"
+            src='https://public.tableau.com/views/WordFrequencybyGenreandDecade_17331267844990/Dashboard1'
+            toolbar="hidden" hide-tabs width="100vw" height="70vh">
+        </tableau-viz> -->
+
+        <button class="btn-accordian" id="btn-lyric-trend"
+            onclick="popularityOpen(event, 'lyric-trend-accordian')">Click to View Lyrical Trends for Trap
+            <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="insight-accordian" id="lyric-trend-accordian">
+
+            <div class="insight-content">
+
+                <img class="insight-img" src="insights/fig 9.png" alt="">
+
+                <div class="text-block">
+
+                    <p>
+                        The decline in unique word count is slightly more pronounced in trap music compared to other
+                        subgenres. This highlights a shift in lyrical diversity over time, with trap increasingly
+                        focusing on repeated phrases or consistent themes.
+
+                    </p>
+
+                    <!-- <h3>You can further explore with the visualization by highlighting different genres to see how
+                        specific sub genres change over time and compare that with the general trend.
+                    </h3> -->
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <section id="chapter-two">
+
+        <div class="title">
+
+            <div class="text-block">
+                <h1>Chapter II: Features</h1>
+
+                <p>
+                    This chapter presents the foundational elements of hip-hop music by analyzing melodic and lyrical
+                    trends. It explores melodic features such as BPM, pitch, and volume, showcasing how these elements
+                    shape the soundscapes of different subgenres. The lyrical analysis focuses on word usage, unique
+                    word count, and category trends, illustrating shifts in thematic focus and lyrical complexity over
+                    time.
+                    By combining these melodic and lyrical insights, Chapter 2 highlights the relationship between
+                    musical composition and storytelling– how these elements shape the identity and expression of the
+                    genre over time.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- bpm by genre -->
+        <div class="graph-div">
+
+            <div class="text-block">
+                <h2>2.1 Melodic Features: BPM</h2>
+                <p>This dashboard explores the tempo characteristics of hip-hop subgenres, specifically focusing on
+                    beats per minute (BPM). It consists of three primary visualizations:
+
+                </p>
+                <p>
+                <p>
+                    <b>Average BPM: </b>A line graph showcasing the average BPM for each subgenre, differentiated by
+                    musical type (Vocal or Background Music).
+                </p>
+                <p>
+                    <b>Detail BPM: </b>A detailed slope chart of individual songs' BPM values per subgenre, connected by
+                    musical type, emphasizing distribution and variability.
+                </p>
+                <p>
+                    <b>BPM Distribution: </b>Histograms representing the distribution of BPM values for each subgenre,
+                    separated into Vocal and Background Music.
+                </p>
+                </p>
+            </div>
+
+            <div data-aos="fade-up" class="full-graph-container">
+                <iframe
+                    src="https://public.tableau.com/views/MelodyFeature/BPMTrend?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                    class="masked-out"></iframe>
+            </div>
+
+            <button class="btn-accordian" id="btn-melody1-genre"
+                onclick="popularityOpen(event, 'melody1-genre-accordian')">Click to View Trap BPM Insights
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <div class="insight-accordian" id="melody1-genre-accordian">
+
+                <div class="insight-content">
+
+                    <div class="text-block">
+                        <div class="insight-div">
+
+                            <div class="insights">
+
+                                <img src="insights/fig6.png" alt="insights1">
+                            </div>
+
+                            <div class="insights">
+
+                                <img src="insights/fig7.png" alt="insights1">
+
+                            </div>
+
+                        </div>
+                        <ul>
+                            <li>
+                                Most subgenres have higher BPM in Background Music than Vocals, except for drill and emo
+                                rap.
+                            </li>
+                            <li>
+                                Trap has the highest average BPM for Vocals while Boom Amp has the lowest average BPM
+                            </li>
+                            <li>
+                                Trap music's average BPM stands at 123.77 for Background Music (BGM) and 133.16 for
+                                Vocals. This positions Trap as a moderately fast-paced subgenre compared to others,
+                                maintaining energy while accommodating its signature layered rhythms and hi-hat rolls.
+                            </li>
+                            <li>
+                                The distinction between BGM and Vocal tracks highlights how Trap uses tempo to create
+                                contrasting dynamics within its productions.
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <img class="insight-img" src="insights/fig8.png" alt="">
+
+
+
+
+                    <div class="text-block">
+
+                        <h5>BPM Parity Between BGM and Vocal: </h5>
+
+                        <p>Almost half of the songs in Trap show similar BPM for their BGM and Vocal components. This
+                            highlights a significant proportion of tracks where the vocal rhythm is tightly synchronized
+                            with the instrumental beat.
+
+                        </p>
+
+                        <h5>
+                            Higher Vocal BPM in Many Tracks:
+                        </h5>
+
+                        <p>
+                            For approximately half of the remaining tracks, the vocal BPM surpasses the BGM BPM. This
+                            suggests that in these songs, vocal delivery is faster-paced, which could reflect the
+                            influence of double-time flows or rapid-fire lyrical styles, a common feature in Trap music.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- <tableau-viz class="full-graph" id="graph3" src='https://public.tableau.com/views/MelodyFeature/BPMTrend'
+                toolbar="hidden" hide-tabs width="100vw" height="70vh">
+            </tableau-viz> -->
+
+        </div>
+
+        <!-- melody by genre -->
+        <div class="graph-div">
+
+            <div class="text-block">
+                <h2>2.2 Melodic Features: Pitch and Volume</h2>
+                <p>In this visualization, we compare the pitch and volume of BGM and vocals across various subgenres.
+                    The right graph displays data points for all songs, using a kernel density plot to illustrate the
+                    distribution.
+                    The left graph aggregates the data by subgenre, showing an overview of pitch and volume trends.
+                    Additionally, we performed regression analysis to examine the correlation between pitch and volume
+                    for each subgenre.
+                    The width of the connecting lines represents the subgenre's popularity, measured by average views.
+                    Users can highlight different subgenres to gain more detailed insights.</p>
+            </div>
+
+            <div data-aos="fade-up" class="full-graph-container" id="pitch-volume-graph">
+                <iframe
+                    src="https://public.tableau.com/views/MelodyFeature/PitchNVolumeTrend?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                    class="masked-out"></iframe>
+            </div>
+
+            <button class="btn-accordian" id="btn-melody2-genre"
+                onclick="popularityOpen(event, 'melody2-genre-accordian')">Click to View Graph Insights
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <div class="insight-accordian" id="melody2-genre-accordian">
+
+                <div class="insight-content">
+
+                    <div class="insight-div">
+
+                        <div class="insights">
+
+                            <img src="insights/fig10.png" alt="insights1">
+                            <h5>
+                                Freestyle as an Outlier
+                            </h5>
+                            <p>
+                                The peak year for the Trap subgenre was 2017, with 1,168 songs released. This signifies
+                                not just
+                                a peak in output but highlights the sheer prominence of Trap within the hip-hop
+                                landscape during
+                                that year.
+                            </p>
+
+                        </div>
+
+                        <div class="insights">
+
+                            <img src="insights/fig11.png" alt="insights1">
+
+                            <h5>
+                                Drill Has the most Distinct Difference between Vocals and BGM
+
+                            </h5>
+                            <p>
+                                In terms of views, Trap songs collectively amassed over 242 million views in 2017,
+                                underscoring
+                                its popularity not only in production but also in listener engagement.
+
+                            </p>
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- <tableau-viz class="full-graph" id="graph4"
+                src='https://public.tableau.com/views/MelodyFeature/PitchNVolumeTrend' toolbar="hidden" hide-tabs
+                width="100vw" height="70vh">
+            </tableau-viz> -->
+
+        </div>
+
+        <!-- lyrics by genre -->
+        <div class="graph-div">
+
+            <div class="graph-div">
+                <div class="text-block">
+                    <h1>2.3 Lyrics by Sub Genre</h1>
+                    <p>The table and radar charts together provide a view of how lyrical themes vary across subgenres.
+                        The table highlights the top and bottom 3 rankings for themes such as relationships, violence,
+                        spirituality, and wealth,
+                        with each column representing a thematic category and rows displaying the highest-ranking
+                        subgenres.
+                        For instance, Trap leads in slang and substance, while East Coast dominates appearance and
+                        wealth.
+                        Complementing this, the radar charts visually compare the thematic focus of each subgenre,
+                        emphasizing distinct content areas like wealth, relationships, and emotion.
+                        By juxtaposing each subgenre with Trap, the charts offer a clearer understanding of thematic
+                        diversity and cultural influence within the lyrical content of these styles.</p>
+                </div>
+
+                <div class="full-graph">
+                    <img id="lyric-chart" src="radar/chart.png" alt="">
+                </div>
+            </div>
+
+            <div class="text-block">
+
+                <p>This radar chart metric visualizes the relative emphasis on lyrical categories across various hip-hop
+                    genres. Each axis represents a thematic category (e.g., wealth, violence, emotion), while the
+                    distance from the center indicates the percentage of words in that category relative to the total
+                    categorized words for the genre.
+                </p>
+                <p>
+                    <b>Axes Represent Themes: </b>Each axis corresponds to a specific lyrical theme, such as "emotion,"
+                    "wealth," or "violence."
+                </p>
+                <p>
+                    <b>Distance from Center: </b>The farther a point is from the center, the higher the percentage of
+                    words
+                    associated with that theme, meaning the genre places more emphasis on it.
+                </p>
+                <p>
+                    Normalized Metrics: The percentage calculation ensures normalization, allowing direct comparisons
+                    across genres regardless of their overall word counts. This metric reflects relative importance
+                    rather than raw frequency.
+
+                </p>
+
+
+
+            </div>
+
+            <div id="radar-grid">
+
+                <div class="radar-container">
+                    <h3>Boom Bap</h3>
+                    <img data-aos="fade-up" src="radar/boombap.png" alt="radar">
+                </div>
+                <div class="radar-container">
+                    <h3>Conscious Hip Hop</h3>
+                    <img data-aos="fade-up" src="radar/conscious.png" alt="radar">
+                </div>
+                <div class="radar-container">
+                    <h3>Dirty South</h3>
+                    <img data-aos="fade-up" src="radar/dirtysouth.png" alt="radar">
+                </div>
+                <div class="radar-container">
+                    <h3>Drill</h3>
+                    <img data-aos="fade-up" src="radar/drill.png" alt="radar">
+                </div>
+                <div class="radar-container">
+                    <h3>East Coast</h3>
+                    <img data-aos="fade-up" src="radar/eastcoast.png" alt="radar">
+                </div>
+                <div class="radar-container">
+                    <h3>Emo Rap</h3>
+                    <img data-aos="fade-up" src="radar/emorap.png" alt="radar">
+                </div>
+                <div class="radar-container">
+                    <h3>Freestyle</h3>
+                    <img data-aos="fade-up" src="radar/freestyle.png" alt="radar">
+                </div>
+                <div class="radar-container">
+                    <h3>Gangsta Rap</h3>
+                    <img data-aos="fade-up" src="radar/gangstarap.png" alt="radar">
+                </div>
+                <div class="radar-container">
+                    <h3>Hardcore Hip Hop</h3>
+                    <img data-aos="fade-up" src="radar/hardcore.png" alt="radar">
+                </div>
+                <div class="radar-container">
+                    <h3>West Coast</h3>
+                    <img data-aos="fade-up" src="radar/westcoast.png" alt="radar">
+                </div>
+
+            </div>
+
+            <button class="btn-accordian" id="btn-lyrics-genre"
+                onclick="popularityOpen(event, 'lyrics-genre-accordian')">Click to See How Trap Compares to Other Genres
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <div class="insight-accordian" id="lyrics-genre-accordian">
+
+                <div class="insight-content">
+
+                    <div class="text-block">
+                        <ul>
+                            <li>
+                                <b>Boom Bag:</b>
+                                Most subgenres have higher BPM in Background Music than Vocals, except for drill and emo
+                                rap.
+                            </li>
+                            <li>
+                                <b>Gangsta Rap:</b>
+                                Trap has the highest average BPM for Vocals while Boom Amp has the lowest average BPM
+                            </li>
+                            <li>
+                                <b>Conscious Hip Hop:</b>
+                                Trap music's average BPM stands at 123.77 for Background Music (BGM) and 133.16 for
+                                Vocals. This positions Trap as a moderately fast-paced subgenre compared to others,
+                                maintaining energy while accommodating its signature layered rhythms and hi-hat rolls.
+                            </li>
+                            <li>
+                                <b>
+                                    Drill:
+                                </b>
+                                The distinction between BGM and Vocal tracks highlights how Trap uses tempo to create
+                                contrasting dynamics within its productions.
+                            </li>
+                            <li>
+                                <b>
+                                    Freestyle:
+                                </b>
+                                Trap and Freestyle share similar emphasis on slang, reflecting the improvisational and
+                                laid-back nature of both styles
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+    </section>
+
+    <section id="chapter-three">
+
+        <div class="title">
+
+            <div class="text-block">
+                <h1>Chapter III: Songs</h1>
+                <p>This chapter analyzes the lyrical sentiment and melodic attributes including pitch and volume.
+                    Analyzing sentiment visualizes the emotional journey within each song, capturing shifts between
+                    positivity, negativity, and neutrality between the verses. On the melodic side, pitch and volume
+                    visualizations highlight the tonal and dynamic layers that define hip-hop’s soundscape.
+                    Together, these analyses illustrate the emotional and auditory diversity that shapes the
+                    storytelling and energy of hip-hop music.
+                </p>
+                <h3>Click on the sub genre tabs below to explore how each song compares in sentiment and melody to other
+                    songs of the same sub genre. </h3>
+            </div>
+        </div>
+
+        <div id="tab-container">
+
+            <div class="tab">
+                <button class="tablinks" id="defaultOpen" onclick="openGraph(event, 'boom-bap')">Boom Bap</button>
+                <button class="tablinks" onclick="openGraph(event, 'conscious')">Conscious Hip-Hop</button>
+                <button class="tablinks" onclick="openGraph(event, 'dirty-south')">Dirty South</button>
+                <button class="tablinks" onclick="openGraph(event, 'drill')">Drill</button>
+                <button class="tablinks" onclick="openGraph(event, 'east')">East Coast</button>
+                <button class="tablinks" onclick="openGraph(event, 'emo')">Emo Rap</button>
+                <button class="tablinks" onclick="openGraph(event, 'freestyle')">Freestyle</button>
+                <button class="tablinks" onclick="openGraph(event, 'gangsta')">Gangsta Rap</button>
+                <button class="tablinks" onclick="openGraph(event, 'hardcore')">Hardcore Hip Hop</button>
+                <button class="tablinks" onclick="openGraph(event, 'trap')">Trap</button>
+                <button class="tablinks" onclick="openGraph(event, 'west')">West Coast</button>
+            </div>
+
+            <!-- lyrical sentiment -->
+
+            <div class="text-block">
+                <h2>3.1 Lyrical Sentiment</h2>
+                <p>This sentiment barcode chart provides a detailed visualization of the sentiment trajectory within
+                    each song. Each bar corresponds to a lyric line, with color-coded sentiment scores ranging from -1
+                    (blue, negative) to 1 (orange, positive). The horizontal arrangement represents the sequence of
+                    lyrics, forming a barcode for each song.
+                </p>
+                <p>
+                    <b>Individual Bars:</b> Each bar represents a single lyric line, its color reflecting the sentiment
+                    score.
+                </p>
+                <p>
+                    <b>Barcodes for Songs:</b> The entire horizontal barcode signifies the sentiment distribution
+                    throughout a
+                    single song's lyrics.
+                </p>
+                <p>
+                    <b>Color Gradient:</b> Shades range from red for strongly negative sentiments, through white for
+                    neutral
+                    lines, to blue for highly positive sentiments.
+                </p>
+                <p>
+                    You can click on each individual barcode to see the overall sentiment score of a song or click on
+                    each stick to see a verse and its sentiment score.
+                </p>
+            </div>
+
+            <div id="content">
+
+                <div id="boom-bap" class="tab-content">
+
+                    <div data-aos="fade-up" class="full-graph-container">
+                        <iframe
+                            src="https://public.tableau.com/views/SentimentSongs/BoomBap_1?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                            class="masked-out"></iframe>
+                    </div>
+
+                    <div class="text-block">
+                        <h2>3.2 Pitch and Volume</h2>
+                        <p>We conducted a frame-by-frame analysis of pitch and volume for the top 10 songs in each
+                            subgenre,
+                            visualizing each song on a pixel display with the horizontal axis representing time.
+                            Each song features two tracks: the upper track for BGM and the lower track for vocals.<br>
+                            <br>
+                            <b>Similarities Among Top Songs: </b>There are notable similarities among the top songs,
+                            particularly in their BGM. These include periodic high-frequency pitches and a generally
+                            fast tempo with higher volume levels. In contrast, vocals tend to dominate the higher
+                            frequencies but exhibit relatively lower volumes. While further insights could be drawn from
+                            direct comparisons between specific songs, we do not delve deeper here.<br>
+                            <br>
+                            <b>Differences in Time-Frequency Characteristics Across Subgenres: </b>
+                            In addition to similarities, distinct differences in time-frequency characteristics can be
+                            observed across subgenres. For instance, the frequency of high-pitched sounds in the BGM of
+                            Boom Amp is significantly lower compared to Trap. This highlights Trap as a genre
+                            characterized by faster tempos and more frequent intermittent high-frequency sounds,
+                            distinguishing it from other subgenres.
+                        </p>
+                    </div>
+
+                    <div data-aos="fade-up" class="full-graph-container">
+                        <iframe
+                            src="https://public.tableau.com/views/BoomBap/BoomBap?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                            class="masked-out"></iframe>
+                    </div>
+                </div>
+
+                <div id="conscious" class="tab-content">
+                    <!-- <tableau-viz class="full-graph" src='https://public.tableau.com/views/ConsciousHip-Hop/Dashboard1'
+                        toolbar="hidden" hide-tabs width="100vw" height="80vh" device="desktop">
+                    </tableau-viz> -->
+
+                    <div data-aos="fade-up" class="full-graph-container">
+                        <iframe
+                            src="https://public.tableau.com/views/SentimentSongs/ConsciousHipHop?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                            class="masked-out"></iframe>
+                    </div>
+                    <div class="text-block">
+                        <h2>3.2 Pitch and Volume</h2>
+                        <p>We conducted a frame-by-frame analysis of pitch and volume for the top 10 songs in each
+                            subgenre,
+                            visualizing each song on a pixel display with the horizontal axis representing time.
+                            Each song features two tracks: the upper track for BGM and the lower track for vocals.<br>
+                            <br>
+                            <b>Similarities Among Top Songs: </b>There are notable similarities among the top songs,
+                            particularly in their BGM. These include periodic high-frequency pitches and a generally
+                            fast tempo with higher volume levels. In contrast, vocals tend to dominate the higher
+                            frequencies but exhibit relatively lower volumes. While further insights could be drawn from
+                            direct comparisons between specific songs, we do not delve deeper here.<br>
+                            <br>
+                            <b>Differences in Time-Frequency Characteristics Across Subgenres: </b>
+                            In addition to similarities, distinct differences in time-frequency characteristics can be
+                            observed across subgenres. For instance, the frequency of high-pitched sounds in the BGM of
+                            Boom Amp is significantly lower compared to Trap. This highlights Trap as a genre
+                            characterized by faster tempos and more frequent intermittent high-frequency sounds,
+                            distinguishing it from other subgenres.
+                        </p>
+                    </div>
+                    <div data-aos="fade-up" class="full-graph-container">
+                        <iframe
+                            src="https://public.tableau.com/views/ConsciousHip-Hop/Dashboard1?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                            class="masked-out"></iframe>
+                    </div>
+                </div>
+
+                <div id="dirty-south" class="tab-content">
+                    <div data-aos="fade-up" class="full-graph-container">
+                        <iframe
+                            src="https://public.tableau.com/views/SentimentSongs/DirtySouth?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                            class="masked-out"></iframe>
+                    </div>
+
+                    <div class="text-block">
+                        <h2>3.2 Pitch and Volume</h2>
+                        <p>We conducted a frame-by-frame analysis of pitch and volume for the top 10 songs in each
+                            subgenre,
+                            visualizing each song on a pixel display with the horizontal axis representing time.
+                            Each song features two tracks: the upper track for BGM and the lower track for vocals.<br>
+                            <br>
+                            <b>Similarities Among Top Songs: </b>There are notable similarities among the top songs,
+                            particularly in their BGM. These include periodic high-frequency pitches and a generally
+                            fast tempo with higher volume levels. In contrast, vocals tend to dominate the higher
+                            frequencies but exhibit relatively lower volumes. While further insights could be drawn from
+                            direct comparisons between specific songs, we do not delve deeper here.<br>
+                            <br>
+                            <b>Differences in Time-Frequency Characteristics Across Subgenres: </b>
+                            In addition to similarities, distinct differences in time-frequency characteristics can be
+                            observed across subgenres. For instance, the frequency of high-pitched sounds in the BGM of
+                            Boom Amp is significantly lower compared to Trap. This highlights Trap as a genre
+                            characterized by faster tempos and more frequent intermittent high-frequency sounds,
+                            distinguishing it from other subgenres.
+                        </p>
+                    </div>
+
+                    <div data-aos="fade-up" class="full-graph-container">
+                        <iframe
+                            src="https://public.tableau.com/views/DirtySouth/Dashboard1?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                            class="masked-out"></iframe>
+                    </div>
+
+
+                </div>
+
+                <div id="drill" class="tab-content">
+                    <div data-aos="fade-up" class="full-graph-container">
+                        <iframe
+                            src="https://public.tableau.com/views/SentimentSongs/Drill?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                            class="masked-out"></iframe>
+                    </div>
+
+                    <div class="text-block">
+                        <h2>3.2 Pitch and Volume</h2>
+                        <p>We conducted a frame-by-frame analysis of pitch and volume for the top 10 songs in each
+                            subgenre,
+                            visualizing each song on a pixel display with the horizontal axis representing time.
+                            Each song features two tracks: the upper track for BGM and the lower track for vocals.<br>
+                            <br>
+                            <b>Similarities Among Top Songs: </b>There are notable similarities among the top songs,
+                            particularly in their BGM. These include periodic high-frequency pitches and a generally
+                            fast tempo with higher volume levels. In contrast, vocals tend to dominate the higher
+                            frequencies but exhibit relatively lower volumes. While further insights could be drawn from
+                            direct comparisons between specific songs, we do not delve deeper here.<br>
+                            <br>
+                            <b>Differences in Time-Frequency Characteristics Across Subgenres: </b>
+                            In addition to similarities, distinct differences in time-frequency characteristics can be
+                            observed across subgenres. For instance, the frequency of high-pitched sounds in the BGM of
+                            Boom Amp is significantly lower compared to Trap. This highlights Trap as a genre
+                            characterized by faster tempos and more frequent intermittent high-frequency sounds,
+                            distinguishing it from other subgenres.
+                        </p>
+                    </div>
+
+                    <div data-aos="fade-up" class="full-graph-container">
+                        <iframe
+                            src="https://public.tableau.com/views/Drill_17329426622490/Dashboard1?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                            class="masked-out"></iframe>
+                    </div>
+
+
+                </div>
+
+                <div id="east" class="tab-content">
+                    <div data-aos="fade-up" class="full-graph-container">
+                        <iframe
+                            src="https://public.tableau.com/views/SentimentSongs/EastCoast?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                            class="masked-out"></iframe>
+                    </div>
+
+                    <div class="text-block">
+                        <h2>3.2 Pitch and Volume</h2>
+                        <p>We conducted a frame-by-frame analysis of pitch and volume for the top 10 songs in each
+                            subgenre,
+                            visualizing each song on a pixel display with the horizontal axis representing time.
+                            Each song features two tracks: the upper track for BGM and the lower track for vocals.<br>
+                            <br>
+                            <b>Similarities Among Top Songs: </b>There are notable similarities among the top songs,
+                            particularly in their BGM. These include periodic high-frequency pitches and a generally
+                            fast tempo with higher volume levels. In contrast, vocals tend to dominate the higher
+                            frequencies but exhibit relatively lower volumes. While further insights could be drawn from
+                            direct comparisons between specific songs, we do not delve deeper here.<br>
+                            <br>
+                            <b>Differences in Time-Frequency Characteristics Across Subgenres: </b>
+                            In addition to similarities, distinct differences in time-frequency characteristics can be
+                            observed across subgenres. For instance, the frequency of high-pitched sounds in the BGM of
+                            Boom Amp is significantly lower compared to Trap. This highlights Trap as a genre
+                            characterized by faster tempos and more frequent intermittent high-frequency sounds,
+                            distinguishing it from other subgenres.
+                        </p>
+                    </div>
+
+                    <div data-aos="fade-up" class="full-graph-container">
+                        <iframe
+                            src="https://public.tableau.com/views/EastCoast_17329429767710/Dashboard1?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                            class="masked-out"></iframe>
+                    </div>
+                </div>
+
+                <div id="emo" class="tab-content">
+                    <div data-aos="fade-up" class="full-graph-container">
+                        <iframe
+                            src="https://public.tableau.com/views/SentimentSongs/EmoRap?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                            class="masked-out"></iframe>
+                    </div>
+
+                    <div class="text-block">
+                        <h2>3.2 Pitch and Volume</h2>
+                        <p>We conducted a frame-by-frame analysis of pitch and volume for the top 10 songs in each
+                            subgenre,
+                            visualizing each song on a pixel display with the horizontal axis representing time.
+                            Each song features two tracks: the upper track for BGM and the lower track for vocals.<br>
+                            <br>
+                            <b>Similarities Among Top Songs: </b>There are notable similarities among the top songs,
+                            particularly in their BGM. These include periodic high-frequency pitches and a generally
+                            fast tempo with higher volume levels. In contrast, vocals tend to dominate the higher
+                            frequencies but exhibit relatively lower volumes. While further insights could be drawn from
+                            direct comparisons between specific songs, we do not delve deeper here.<br>
+                            <br>
+                            <b>Differences in Time-Frequency Characteristics Across Subgenres: </b>
+                            In addition to similarities, distinct differences in time-frequency characteristics can be
+                            observed across subgenres. For instance, the frequency of high-pitched sounds in the BGM of
+                            Boom Amp is significantly lower compared to Trap. This highlights Trap as a genre
+                            characterized by faster tempos and more frequent intermittent high-frequency sounds,
+                            distinguishing it from other subgenres.
+                        </p>
+                    </div>
+
+                    <div data-aos="fade-up" class="full-graph-container">
+                        <iframe
+                            src="https://public.tableau.com/views/EmoRap/Dashboard1?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                            class="masked-out"></iframe>
+                    </div>
+
+
+                </div>
+
+                <div id="freestyle" class="tab-content">
+                    <div data-aos="fade-up" class="full-graph-container">
+                        <iframe
+                            src="https://public.tableau.com/views/SentimentSongs/Freestyle?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                            class="masked-out"></iframe>
+                    </div>
+                    <div class="text-block">
+                        <h2>3.2 Pitch and Volume</h2>
+                        <p>We conducted a frame-by-frame analysis of pitch and volume for the top 10 songs in each
+                            subgenre,
+                            visualizing each song on a pixel display with the horizontal axis representing time.
+                            Each song features two tracks: the upper track for BGM and the lower track for vocals.<br>
+                            <br>
+                            <b>Similarities Among Top Songs: </b>There are notable similarities among the top songs,
+                            particularly in their BGM. These include periodic high-frequency pitches and a generally
+                            fast tempo with higher volume levels. In contrast, vocals tend to dominate the higher
+                            frequencies but exhibit relatively lower volumes. While further insights could be drawn from
+                            direct comparisons between specific songs, we do not delve deeper here.<br>
+                            <br>
+                            <b>Differences in Time-Frequency Characteristics Across Subgenres: </b>
+                            In addition to similarities, distinct differences in time-frequency characteristics can be
+                            observed across subgenres. For instance, the frequency of high-pitched sounds in the BGM of
+                            Boom Amp is significantly lower compared to Trap. This highlights Trap as a genre
+                            characterized by faster tempos and more frequent intermittent high-frequency sounds,
+                            distinguishing it from other subgenres.
+                        </p>
+                    </div>
+
+                    <div data-aos="fade-up" class="full-graph-container">
+                        <iframe
+                            src="https://public.tableau.com/views/Freestyle_17329432945760/Dashboard1?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                            class="masked-out"></iframe>
+                    </div>
+
+                </div>
+
+                <div id="gangsta" class="tab-content">
+                    <div data-aos="fade-up" class="full-graph-container">
+                        <iframe
+                            src="https://public.tableau.com/views/SentimentSongs/GangstaRap?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                            class="masked-out"></iframe>
+                    </div>
+
+                    <div class="text-block">
+                        <h2>3.2 Pitch and Volume</h2>
+                        <p>We conducted a frame-by-frame analysis of pitch and volume for the top 10 songs in each
+                            subgenre,
+                            visualizing each song on a pixel display with the horizontal axis representing time.
+                            Each song features two tracks: the upper track for BGM and the lower track for vocals.<br>
+                            <br>
+                            <b>Similarities Among Top Songs: </b>There are notable similarities among the top songs,
+                            particularly in their BGM. These include periodic high-frequency pitches and a generally
+                            fast tempo with higher volume levels. In contrast, vocals tend to dominate the higher
+                            frequencies but exhibit relatively lower volumes. While further insights could be drawn from
+                            direct comparisons between specific songs, we do not delve deeper here.<br>
+                            <br>
+                            <b>Differences in Time-Frequency Characteristics Across Subgenres: </b>
+                            In addition to similarities, distinct differences in time-frequency characteristics can be
+                            observed across subgenres. For instance, the frequency of high-pitched sounds in the BGM of
+                            Boom Amp is significantly lower compared to Trap. This highlights Trap as a genre
+                            characterized by faster tempos and more frequent intermittent high-frequency sounds,
+                            distinguishing it from other subgenres.
+                        </p>
+                    </div>
+
+                    <div data-aos="fade-up" class="full-graph-container">
+                        <iframe
+                            src="https://public.tableau.com/views/GangstaRap/Dashboard1?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                            class="masked-out"></iframe>
+                    </div>
+                </div>
+
+                <div id="hardcore" class="tab-content">
+                    <div data-aos="fade-up" class="full-graph-container">
+                        <iframe
+                            src="https://public.tableau.com/views/SentimentSongs/Hardcore?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                            class="masked-out"></iframe>
+                    </div>
+
+                    <div class="text-block">
+                        <h2>3.2 Pitch and Volume</h2>
+                        <p>We conducted a frame-by-frame analysis of pitch and volume for the top 10 songs in each
+                            subgenre,
+                            visualizing each song on a pixel display with the horizontal axis representing time.
+                            Each song features two tracks: the upper track for BGM and the lower track for vocals.<br>
+                            <br>
+                            <b>Similarities Among Top Songs: </b>There are notable similarities among the top songs,
+                            particularly in their BGM. These include periodic high-frequency pitches and a generally
+                            fast tempo with higher volume levels. In contrast, vocals tend to dominate the higher
+                            frequencies but exhibit relatively lower volumes. While further insights could be drawn from
+                            direct comparisons between specific songs, we do not delve deeper here.<br>
+                            <br>
+                            <b>Differences in Time-Frequency Characteristics Across Subgenres: </b>
+                            In addition to similarities, distinct differences in time-frequency characteristics can be
+                            observed across subgenres. For instance, the frequency of high-pitched sounds in the BGM of
+                            Boom Amp is significantly lower compared to Trap. This highlights Trap as a genre
+                            characterized by faster tempos and more frequent intermittent high-frequency sounds,
+                            distinguishing it from other subgenres.
+                        </p>
+                    </div>
+
+                    <div data-aos="fade-up" class="full-graph-container">
+                        <iframe
+                            src="https://public.tableau.com/views/Hardcore/Dashboard1?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                            class="masked-out"></iframe>
+                    </div>
+                </div>
+
+                <div id="trap" class="tab-content">
+                    <div data-aos="fade-up" class="full-graph-container">
+                        <iframe
+                            src="https://public.tableau.com/views/SentimentSongs/Trap?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                            class="masked-out"></iframe>
+                    </div>
+
+                    <div class="text-block">
+                        <h2>3.2 Pitch and Volume</h2>
+                        <p>We conducted a frame-by-frame analysis of pitch and volume for the top 10 songs in each
+                            subgenre,
+                            visualizing each song on a pixel display with the horizontal axis representing time.
+                            Each song features two tracks: the upper track for BGM and the lower track for vocals.<br>
+                            <br>
+                            <b>Similarities Among Top Songs: </b>There are notable similarities among the top songs,
+                            particularly in their BGM. These include periodic high-frequency pitches and a generally
+                            fast tempo with higher volume levels. In contrast, vocals tend to dominate the higher
+                            frequencies but exhibit relatively lower volumes. While further insights could be drawn from
+                            direct comparisons between specific songs, we do not delve deeper here.<br>
+                            <br>
+                            <b>Differences in Time-Frequency Characteristics Across Subgenres: </b>
+                            In addition to similarities, distinct differences in time-frequency characteristics can be
+                            observed across subgenres. For instance, the frequency of high-pitched sounds in the BGM of
+                            Boom Amp is significantly lower compared to Trap. This highlights Trap as a genre
+                            characterized by faster tempos and more frequent intermittent high-frequency sounds,
+                            distinguishing it from other subgenres.
+                        </p>
+                    </div>
+
+                    <div data-aos="fade-up" class="full-graph-container">
+                        <iframe
+                            src="https://public.tableau.com/views/Trap_17329439620950/Dashboard1?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                            class="masked-out"></iframe>
+                    </div>
+
+
+                </div>
+
+                <div id="west" class="tab-content">
+                    <div data-aos="fade-up" class="full-graph-container">
+                        <iframe
+                            src="https://public.tableau.com/views/SentimentSongs/WestCoast?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                            class="masked-out"></iframe>
+                    </div>
+
+                    <div class="text-block">
+                        <h2>3.2 Pitch and Volume</h2>
+                        <p>We conducted a frame-by-frame analysis of pitch and volume for the top 10 songs in each
+                            subgenre,
+                            visualizing each song on a pixel display with the horizontal axis representing time.
+                            Each song features two tracks: the upper track for BGM and the lower track for vocals.<br>
+                            <br>
+                            <b>Similarities Among Top Songs: </b>There are notable similarities among the top songs,
+                            particularly in their BGM. These include periodic high-frequency pitches and a generally
+                            fast tempo with higher volume levels. In contrast, vocals tend to dominate the higher
+                            frequencies but exhibit relatively lower volumes. While further insights could be drawn from
+                            direct comparisons between specific songs, we do not delve deeper here.<br>
+                            <br>
+                            <b>Differences in Time-Frequency Characteristics Across Subgenres: </b>
+                            In addition to similarities, distinct differences in time-frequency characteristics can be
+                            observed across subgenres. For instance, the frequency of high-pitched sounds in the BGM of
+                            Boom Amp is significantly lower compared to Trap. This highlights Trap as a genre
+                            characterized by faster tempos and more frequent intermittent high-frequency sounds,
+                            distinguishing it from other subgenres.
+                        </p>
+                    </div>
+
+                    <div data-aos="fade-up" class="full-graph-container">
+                        <iframe
+                            src="https://public.tableau.com/views/WestCoast_17329445056890/Dashboard1?:embed=y&:display_count=yes&publish=yes&%3AshowVizHome=no"
+                            class="masked-out"></iframe>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- scripts -->
+    <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
